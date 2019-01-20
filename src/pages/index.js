@@ -32,6 +32,20 @@ export default class IndexPage extends Component {
     })
   }
 
+  openedProfile = person => {
+    let open = false
+
+    if (!this.state[person]) {
+      open = true
+    } else if (this.state[person]) {
+      open = !this.state[person]
+    }
+
+    this.setState({
+      [person]: open,
+    })
+  }
+
   render() {
     const { firstName, lastName, phone, email, message } = this.state
 
@@ -105,24 +119,18 @@ export default class IndexPage extends Component {
               </div>
             </div>
           </nav>
-          <Parallax ref={ref => (this.parallax = ref)} pages={6} horizontal>
+          <Parallax ref={ref => (this.parallax = ref)} pages={4.6} horizontal>
             <ParallaxLayer offset={0} speed={0} factor={2}>
               <Image className="title-background" imgsrc="title_page.png" />
             </ParallaxLayer>
-            <ParallaxLayer offset={1} speed={0} factor={6}>
+            <ParallaxLayer offset={1} speed={0} factor={20}>
               <div className="main-background" />
-            </ParallaxLayer>
-            <ParallaxLayer offset={4.5} speed={0} factor={0.5}>
-              <div className="black-background" />
-            </ParallaxLayer>
-            <ParallaxLayer offset={5} speed={0} factor={1}>
-              <div className="black-background" />
             </ParallaxLayer>
 
             <ParallaxLayer
               offset={0}
               speed={0.1}
-              style={{ display: 'block', width: '6%', marginLeft: '12%' }}
+              style={{ display: 'block', width: '10%', marginLeft: '16%' }}
             >
               <Image imgsrc="branch1.png" className="branch1" />
             </ParallaxLayer>
@@ -130,11 +138,14 @@ export default class IndexPage extends Component {
             <ParallaxLayer
               offset={0}
               speed={0.1}
-              style={{ display: 'block', width: '6%', marginLeft: '-1%' }}
+              style={{
+                display: 'block',
+                width: '10%',
+                marginLeft: '-4%',
+              }}
             >
               <Image imgsrc="branch2.png" className="branch2" />
             </ParallaxLayer>
-
             <ParallaxLayer
               offset={0}
               speed={0.1}
@@ -142,7 +153,6 @@ export default class IndexPage extends Component {
             >
               <Image imgsrc="leaf1.png" className="leaf1" />
             </ParallaxLayer>
-
             <ParallaxLayer
               offset={0}
               speed={0.1}
@@ -150,7 +160,6 @@ export default class IndexPage extends Component {
             >
               <Image imgsrc="leaf2.png" className="leaf2" />
             </ParallaxLayer>
-
             <ParallaxLayer
               offset={0}
               speed={0.1}
@@ -164,19 +173,18 @@ export default class IndexPage extends Component {
             >
               <div className="title-container">
                 <div className="title-text-container">
-                  <h2 className="header">An AFI Thesis Film</h2>
-                  <h1 className="home-title">The Speech</h1>
+                  <Image className="afi-thesis" imgsrc="AFI Thesis.png" />
+                  <Image
+                    className="the-speech-title"
+                    imgsrc="THE SPEECH WHITE.png"
+                  />
+                  <Image className="chinese-title" imgsrc="Chinese Title.png" />
                 </div>
-                <button
-                  type="button"
-                  className="button is-black title-button"
-                  onClick={() => this.parallax.scrollTo(5)}
-                >
-                  <h2>Donate</h2>
+                <button type="button" className="button is-black title-button">
+                  <Image className="donate-title" imgsrc="DONATE NEW.png" />
                 </button>
               </div>
             </ParallaxLayer>
-
             <ParallaxLayer
               offset={1}
               speed={0.1}
@@ -200,9 +208,8 @@ export default class IndexPage extends Component {
                 </p>
               </div>
             </ParallaxLayer>
-
             <ParallaxLayer
-              offset={2}
+              offset={1.8}
               speed={0.1}
               style={{
                 display: 'flex',
@@ -214,38 +221,88 @@ export default class IndexPage extends Component {
               <div className="container team-container">
                 <h1 className="title">Team</h1>
                 <div className="columns">
-                  <div className="column">
+                  <div
+                    className="column"
+                    onClick={() => {
+                      this.openedProfile('haohao')
+                    }}
+                  >
                     <Image
                       imgsrc="haohao.png"
                       className="team-img"
                       alt="haohao"
+                      onClick={() => {
+                        this.openedProfile('haohao')
+                      }}
                     />
                   </div>
-                  <div className="column">
+                  <div
+                    className="column"
+                    onClick={() => {
+                      this.openedProfile('xiaoxiao')
+                    }}
+                  >
                     <Image
                       imgsrc="xiaoxiao.png"
                       className="team-img"
                       alt="xiaoxiao"
+                      onClick={() => {
+                        this.openedProfile('xiaoxiao')
+                      }}
                     />
                   </div>
-                  <div className="column">
+                  <div
+                    className="column"
+                    onClick={() => {
+                      this.openedProfile('anton')
+                    }}
+                  >
                     <Image
                       imgsrc="anton.png"
                       className="team-img"
                       alt="anton"
+                      onClick={() => {
+                        this.openedProfile('anton')
+                      }}
                     />
                   </div>
                 </div>
                 <div className="columns">
-                  <div className="column">
-                    <Image imgsrc="luqi.png" className="team-img" alt="luqi" />
+                  <div
+                    className="column"
+                    onClick={() => {
+                      this.openedProfile('luqi')
+                    }}
+                  >
+                    <Image
+                      imgsrc="luqi.png"
+                      className="team-img"
+                      alt="luqi"
+                      onClick={() => {
+                        this.openedProfile('luqi')
+                      }}
+                    />
+                  </div>
+                  <div
+                    className="column"
+                    onClick={() => {
+                      this.openedProfile('luqi')
+                    }}
+                  >
+                    <Image
+                      imgsrc="kiki.png"
+                      className="team-img"
+                      alt="kiki"
+                      onClick={() => {
+                        this.openedProfile('kiki')
+                      }}
+                    />
                   </div>
                 </div>
               </div>
             </ParallaxLayer>
-
             <ParallaxLayer
-              offset={3}
+              offset={2.5}
               speed={0.1}
               style={{
                 display: 'flex',
@@ -322,9 +379,8 @@ export default class IndexPage extends Component {
                 </div>
               </section>
             </ParallaxLayer>
-
             <ParallaxLayer
-              offset={4}
+              offset={3.2}
               speed={0.1}
               style={{
                 display: 'flex',
@@ -421,9 +477,8 @@ export default class IndexPage extends Component {
                 </div>
               </div>
             </ParallaxLayer>
-
             <ParallaxLayer
-              offset={5}
+              offset={4.0}
               speed={0.1}
               style={{
                 display: 'flex',
