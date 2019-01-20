@@ -11,7 +11,7 @@ body,
 h1,
 h2,
 h3 {
-  font-family: wcRoughTrad;
+  font-family: wcRoughTrad !important;
 }
 
 .container > div > div {
@@ -144,16 +144,19 @@ h3 {
   margin-bottom: 8%;
 }
 
-.title-button {
+.button {
   font-size: 30px;
   height: 70px;
-  margin-top: 60px;
   max-width: 300px;
   width: 100%;
 
   h2 {
     text-transform: uppercase;
   }
+}
+
+.title-button {
+  margin-top: 60px;
 }
 
 .body {
@@ -204,6 +207,7 @@ h3 {
 .afi-section {
   padding-top: 10%;
   position: relative;
+  font-size: 15px;
 }
 
 .afi-logo {
@@ -211,9 +215,26 @@ h3 {
   right: 10%;
 }
 
+.donate-conatainer {
+  padding-top: 6%;
+}
+
 .donate-section {
   color: white;
   text-align: left;
+  font-size: 15px;
+
+  ul {
+    line-height: 1;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+}
+
+.donate-button {
+  margin-bottom: 1.5rem;
 }
 
 .team-container {
@@ -233,4 +254,14 @@ h3 {
 
 .data-field {
   display: block !important;
+}
+
+.contact-container {
+  label {
+    color: white;
+  }
+
+  .field {
+    margin-bottom: 0;
+  }
 }

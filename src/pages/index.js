@@ -114,7 +114,11 @@ export default class IndexPage extends Component {
                   <h2 className="header">An AFI Thesis Film</h2>
                   <h1 className="home-title">The Speech</h1>
                 </div>
-                <button type="button" className="button is-black title-button">
+                <button
+                  type="button"
+                  className="button is-black title-button"
+                  onClick={() => this.parallax.scrollTo(5)}
+                >
                   <h2>Donate</h2>
                 </button>
               </div>
@@ -278,8 +282,16 @@ export default class IndexPage extends Component {
               id="support"
               onClick={() => this.parallax.scrollTo(5)}
             >
-              <div className="container story-container">
+              <div className="container donate-container">
                 <h1 className="title">How to Make a Donation</h1>
+                <a href="https://my.afi.com/dev/contribute2.aspx?don=244&fieldAmt=">
+                  <button
+                    type="button"
+                    className="button is-black donate-button"
+                  >
+                    <h2>Donate</h2>
+                  </button>
+                </a>
                 <div className="columns">
                   <div className="column">
                     <div className="donate-section">
@@ -319,7 +331,7 @@ export default class IndexPage extends Component {
                   </div>
                   <div className="column">
                     <div className="donate-section">
-                      <b>MATCHING GRANTS</b>
+                      <b className="title">MATCHING GRANTS</b>
                       <br />
                       <br />
                       <p>
@@ -332,7 +344,7 @@ export default class IndexPage extends Component {
                         Portal. Please contact us for additional help.
                       </p>
                       <br />
-                      <b>TAX DEDUCTIONS</b>
+                      <b className="title">TAX DEDUCTIONS</b>
                       <br />
                       <br />
                       <p>
@@ -343,7 +355,7 @@ export default class IndexPage extends Component {
                         letter of acknowledgement from AFI will be sent for all
                         contributions.
                       </p>
-                      <b> IN-KIND DONATIONS </b>
+                      <b className="title"> IN-KIND DONATIONS </b>
                       <br />
                       <br />
                       <p>
@@ -367,9 +379,8 @@ export default class IndexPage extends Component {
                 justifyContent: 'center',
               }}
               id="contact"
-              onClick={() => this.parallax.scrollTo(0)}
             >
-              <div className="container story-container">
+              <div className="container contact-container">
                 <h1 className="title">Contact Us</h1>
                 <p className="contact-info">
                   2021 N Western Ave, CA 90027
@@ -377,23 +388,59 @@ export default class IndexPage extends Component {
                   afiproduction@gmail.com | Tel: 213-572-9695
                 </p>
                 <div className="body">
-                  <div className="field data-field">
-                    <label className="label">Email</label>
-                    <div className="control has-icons-left has-icons-right">
-                      <input
-                        className="input is-danger"
-                        type="email"
-                        placeholder="Email input"
-                        value="hello@"
-                      />
-                      <span className="icon is-small is-left">
-                        <i className="fas fa-envelope" />
-                      </span>
-                      <span className="icon is-small is-right">
-                        <i className="fas fa-exclamation-triangle" />
-                      </span>
+                  <div className="columns">
+                    <div className=" column field data-field">
+                      <label className="label">First Name</label>
+                      <div className="control">
+                        <input
+                          className="input is-danger"
+                          type="text"
+                          placeholder="First Name"
+                          value=""
+                        />
+                      </div>
                     </div>
-                    <p className="help is-danger">This email is invalid</p>
+                    <div className=" column field data-field">
+                      <label className="label">Last Name</label>
+                      <div className="control">
+                        <input
+                          className="input is-danger"
+                          type="text"
+                          placeholder="Last Name"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="columns">
+                    <div className=" column field data-field">
+                      <label className="label">Email</label>
+                      <div className="control has-icons-left has-icons-right">
+                        <input
+                          className="input is-danger"
+                          type="email"
+                          placeholder="Email"
+                          value=""
+                        />
+                        <span className="icon is-small is-left">
+                          <i className="fas fa-envelope" />
+                        </span>
+                        <span className="icon is-small is-right">
+                          <i className="fas fa-exclamation-triangle" />
+                        </span>
+                      </div>
+                    </div>
+                    <div className=" column field data-field">
+                      <label className="label">Phone</label>
+                      <div className="control">
+                        <input
+                          className="input is-danger"
+                          type="number"
+                          placeholder="Phone"
+                          value=""
+                        />
+                      </div>
+                    </div>
                   </div>
 
                   <div className="field data-field">
