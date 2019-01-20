@@ -1,0 +1,236 @@
+@import '~bulma';
+@import '~bulma/sass/utilities/initial-variables';
+@import '~bulma/sass/components/navbar';
+
+@font-face {
+  font-family: wcRoughTrad;
+  src: url(../fonts/WC_RoughTrad.ttf);
+}
+
+body,
+h1,
+h2,
+h3 {
+  font-family: wcRoughTrad;
+}
+
+.container > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-background {
+  background-image: url('../images/scene.jpg');
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.title-background {
+  background-image: url('../images/title_page.png');
+  height: 100%;
+  width: 100%;
+}
+
+.black-background {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+}
+
+.text {
+  pointer-events: none;
+  justify-content: start !important;
+  font-family: 'Kanit', sans-serif;
+  line-height: 0px;
+  text-transform: uppercase;
+}
+
+.number {
+  font-size: 450px;
+  color: white;
+}
+
+.number span {
+  display: inline-block;
+  position: relative;
+  transform: translate3d(-35%, 0, 0);
+}
+
+.header {
+  font-size: 70px;
+  color: white;
+}
+
+.stripe {
+  height: 2px;
+  width: auto;
+}
+
+.slopeBegin {
+  background-color: #20232f;
+  clip-path: polygon(20vw 0, 70% 0, calc(70% - 20vw) 100%, 0 100%);
+}
+
+.slopeEnd {
+  clip-path: polygon(
+    70% 0,
+    100% 0,
+    calc(100% - 20vw) 100%,
+    calc(70% - 20vw) 100%
+  );
+}
+
+.slopeBegin,
+.slopeEnd {
+  position: absolute;
+  width: 140%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.pink {
+  background: linear-gradient(to right, deeppink 0%, coral 100%);
+}
+
+.teal {
+  background: linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%);
+}
+
+.tomato {
+  background: linear-gradient(to right, tomato 0%, gold 100%);
+}
+
+.title-container {
+  bottom: 26%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: white;
+}
+
+.home-title {
+  color: white;
+}
+
+.body {
+  color: white;
+}
+
+.header {
+  font-size: 30px;
+  margin-bottom: 6%;
+}
+
+.home-title {
+  font-size: 40px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.title-text-container {
+  margin-bottom: 8%;
+}
+
+.title-button {
+  font-size: 30px;
+  height: 70px;
+  margin-top: 60px;
+  max-width: 300px;
+  width: 100%;
+
+  h2 {
+    text-transform: uppercase;
+  }
+}
+
+.body {
+  font-size: 20px;
+  line-height: 2.6;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+  text-align: left;
+}
+
+.list {
+  text-align: left;
+}
+
+.navbar {
+  background-color: transparent;
+  height: 70px;
+  padding: 50px 0 50px 50px;
+  padding: 0;
+  padding: 0 0 0 50px;
+  transition: all 0.5s ease;
+}
+
+.navbar-item {
+  color: white;
+  text-decoration: underline;
+  &:hover {
+    color: white;
+  }
+}
+
+.team-img {
+  max-width: 200px;
+  width: 100%;
+}
+
+.afi-container {
+  padding: 14%;
+
+  p {
+    color: white;
+    margin-top: 2%;
+    text-align: left;
+  }
+}
+
+.afi-section {
+  padding-top: 10%;
+  position: relative;
+}
+
+.afi-logo {
+  position: absolute;
+  right: 10%;
+}
+
+.donate-section {
+  color: white;
+  text-align: left;
+}
+
+.team-container {
+  padding: 14%;
+}
+
+.contact-info {
+  text-align: center;
+  color: white;
+}
+
+.bullets {
+  color: white;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.data-field {
+  display: block !important;
+}
