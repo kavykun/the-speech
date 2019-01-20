@@ -28,9 +28,8 @@ h3 {
 }
 
 .title-background {
-  background-image: url('../images/title_page.png');
   height: 100%;
-  width: 100%;
+  width: 50%;
 }
 
 .black-background {
@@ -38,8 +37,34 @@ h3 {
   height: 100%;
   width: 100%;
 }
+.branch1 {
+  -moz-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
 
-.text {
+.leaf1 {
+  -moz-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+.leaf2 {
+  -moz-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+.branch2 {
+  -moz-transform: scale(-1, -1);
+  -o-transform: scale(-1, -1);
+  -webkit-transform: scale(-1, -1);
+  transform: scale(-1, -1);
+}
+.b .text {
   pointer-events: none;
   justify-content: start !important;
   font-family: 'Kanit', sans-serif;

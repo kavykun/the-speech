@@ -13,7 +13,28 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 export default class IndexPage extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      firstName: '',
+      lastName: '',
+      phone: '',
+      email: '',
+      message: '',
+    }
+
+    this.editForm = this.editForm.bind(this)
+  }
+
+  editForm = ({ target: { name, value } }) => {
+    this.setState({
+      [name]: value || '',
+    })
+  }
+
   render() {
+    const { firstName, lastName, phone, email, message } = this.state
+
     return (
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -85,8 +106,8 @@ export default class IndexPage extends Component {
             </div>
           </nav>
           <Parallax ref={ref => (this.parallax = ref)} pages={6} horizontal>
-            <ParallaxLayer offset={0} speed={0} factor={1}>
-              <div className="title-background" />
+            <ParallaxLayer offset={0} speed={0} factor={2}>
+              <Image className="title-background" imgsrc="title_page.png" />
             </ParallaxLayer>
             <ParallaxLayer offset={1} speed={0} factor={6}>
               <div className="main-background" />
@@ -96,6 +117,38 @@ export default class IndexPage extends Component {
             </ParallaxLayer>
             <ParallaxLayer offset={5} speed={0} factor={1}>
               <div className="black-background" />
+            </ParallaxLayer>
+
+            <ParallaxLayer
+              offset={0}
+              speed={0.1}
+              style={{ display: 'block', width: '6%', marginLeft: '12%' }}
+            >
+              <Image imgsrc="branch1.png" className="branch1" />
+            </ParallaxLayer>
+
+            <ParallaxLayer
+              offset={0}
+              speed={0.1}
+              style={{ display: 'block', width: '6%', marginLeft: '-1%' }}
+            >
+              <Image imgsrc="branch2.png" className="branch2" />
+            </ParallaxLayer>
+
+            <ParallaxLayer
+              offset={0}
+              speed={0.1}
+              style={{ display: 'block', width: '0.5%' }}
+            >
+              <Image imgsrc="leaf1.png" className="leaf1" />
+            </ParallaxLayer>
+
+            <ParallaxLayer
+              offset={0}
+              speed={0.1}
+              style={{ display: 'block', width: '0.5%' }}
+            >
+              <Image imgsrc="leaf2.png" className="leaf2" />
             </ParallaxLayer>
 
             <ParallaxLayer
@@ -157,7 +210,6 @@ export default class IndexPage extends Component {
                 justifyContent: 'center',
               }}
               id="team"
-              onClick={() => this.parallax.scrollTo(3)}
             >
               <div className="container team-container">
                 <h1 className="title">Team</h1>
@@ -396,7 +448,9 @@ export default class IndexPage extends Component {
                           className="input is-danger"
                           type="text"
                           placeholder="First Name"
-                          value=""
+                          onChange={this.editForm}
+                          value={firstName}
+                          name="firstName"
                         />
                       </div>
                     </div>
@@ -407,7 +461,9 @@ export default class IndexPage extends Component {
                           className="input is-danger"
                           type="text"
                           placeholder="Last Name"
-                          value=""
+                          onChange={this.editForm}
+                          value={lastName}
+                          name="lastName"
                         />
                       </div>
                     </div>
@@ -420,7 +476,9 @@ export default class IndexPage extends Component {
                           className="input is-danger"
                           type="email"
                           placeholder="Email"
-                          value=""
+                          onChange={this.editForm}
+                          value={email}
+                          name="email"
                         />
                         <span className="icon is-small is-left">
                           <i className="fas fa-envelope" />
@@ -437,7 +495,9 @@ export default class IndexPage extends Component {
                           className="input is-danger"
                           type="number"
                           placeholder="Phone"
-                          value=""
+                          onChange={this.editForm}
+                          value={phone}
+                          name="phone"
                         />
                       </div>
                     </div>
@@ -446,7 +506,13 @@ export default class IndexPage extends Component {
                   <div className="field data-field">
                     <label className="label">Message</label>
                     <div className="control">
-                      <textarea className="textarea" placeholder="Textarea" />
+                      <textarea
+                        className="textarea"
+                        placeholder="Textarea"
+                        onChange={this.editForm}
+                        value={message}
+                        name="message"
+                      />
                     </div>
                   </div>
                 </div>
