@@ -130,7 +130,12 @@ export default class IndexPage extends Component {
             <ParallaxLayer
               offset={0}
               speed={0.1}
-              style={{ display: 'block', width: '10%', marginLeft: '16%' }}
+              style={{
+                display: 'block',
+                width: '10%',
+                marginLeft: '16%',
+                marginTop: '-1%',
+              }}
             >
               <Image imgsrc="branch1.png" className="branch1" />
             </ParallaxLayer>
@@ -314,6 +319,7 @@ export default class IndexPage extends Component {
             >
               <section id="afi" className="section afi-section">
                 <div className="container afi-container">
+                  <h1 className="title">AFI Conservatory</h1>
                   <p>
                     At the world-renowned AFI Conservatory, a dedicated group of
                     working professionals from the film and television
@@ -393,11 +399,8 @@ export default class IndexPage extends Component {
               <div className="container donate-container">
                 <h1 className="title">How to Make a Donation</h1>
                 <a href="https://my.afi.com/dev/contribute2.aspx?don=244&fieldAmt=">
-                  <button
-                    type="button"
-                    className="button is-black donate-button"
-                  >
-                    <h2>Donate</h2>
+                  <button type="button" className="button donate-button">
+                    <h2>Donate Here</h2>
                   </button>
                 </a>
                 <div className="columns">
@@ -489,11 +492,6 @@ export default class IndexPage extends Component {
             >
               <div className="container contact-container">
                 <h1 className="title">Contact Us</h1>
-                <p className="contact-info">
-                  2021 N Western Ave, CA 90027
-                  <br />
-                  afiproduction@gmail.com | Tel: 213-572-9695
-                </p>
                 <div className="body">
                   <div className="columns">
                     <div className=" column field data-field">
