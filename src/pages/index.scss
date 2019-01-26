@@ -14,7 +14,18 @@
 }
 
 .main-background {
-  background-image: url('../images/scene.jpg');
+  background-image: url('../images/extended_background-clean-horizontal.jpg');
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+
+  @include until($desktop) {
+    background-image: url('../images/extended_background-clean-vertical.jpg');
+  }
+}
+
+.last-background {
+  background-image: url('../images/black_background.jpg');
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
@@ -120,20 +131,12 @@
   background: linear-gradient(to right, tomato 0%, gold 100%);
 }
 
-.title-container {
-  bottom: 26%;
-  left: 0;
-  position: absolute;
-  right: 0;
-  text-align: center;
-}
-
 .container {
   text-align: center;
 }
 
 .title {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 300;
   text-transform: uppercase;
   color: white;
@@ -160,7 +163,16 @@
 }
 
 .title-text-container {
-  margin-bottom: 8%;
+  position: absolute;
+  top: 11%;
+  width: 100%;
+
+  a {
+    width: 200px;
+    top: 54%;
+    position: absolute;
+    left: 54%;
+  }
 }
 
 .button {
@@ -172,15 +184,6 @@
   h2 {
     text-transform: uppercase;
   }
-}
-
-.title-button {
-  height: 50px;
-  max-width: 160px;
-  background-color: transparent !important;
-  top: -124px;
-  right: -62px;
-  box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25);
 }
 
 .body {
@@ -215,13 +218,7 @@
 .team-img {
   max-width: 200px;
   width: 100%;
-  height: 100%;
 }
-
-// #story {
-//   width: 1000px;
-//   max-width: 1000px;
-// }
 
 .story-section,
 .afi-section,
@@ -229,9 +226,19 @@
 .support-container,
 .donate-section,
 .donate-container,
-.contact-container,
 .contact-section {
   max-width: 800px;
+}
+
+.contact-container {
+  max-width: 400px;
+  right: 4%;
+  position: absolute;
+
+  @include from(1440px) {
+    left: -32%;
+    right: 0;
+  }
 }
 
 .story-container {
@@ -240,6 +247,11 @@
   .body {
     text-align: justify;
     line-height: 1.5;
+    padding: 10%;
+
+    @include from($desktop) {
+      padding: 0;
+    }
   }
 }
 
@@ -260,33 +272,66 @@
 }
 
 .afi-thesis {
-  width: 16%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
-  top: -270px;
-  left: 60px;
+
+  @include from($desktop) {
+    width: 16%;
+    left: 5%;
+  }
+}
+
+.the-speech-title {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include from($desktop) {
+    width: 30%;
+    left: 5%;
+    margin-top: 34px;
+    margin-bottom: 16px;
+  }
 }
 
 .chinese-title {
-  width: 14%;
+  width: 40%;
   margin-left: auto;
   margin-right: auto;
-  top: -202px;
-  left: 60px;
+
+  @include from($desktop) {
+    width: 14%;
+    left: 5%;
+  }
+}
+
+.title-button {
+  height: 50px;
+  max-width: 160px;
+  background-color: transparent !important;
+  box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25);
+
+  @include from($desktop) {
+    position: relative;
+  }
+}
+
+.title-link {
+  width: 200px;
+  top: 54%;
+  position: absolute;
+  left: 49%;
 }
 
 .donate-title {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-}
 
-.the-speech-title {
-  width: 30%;
-  margin-left: auto;
-  margin-right: auto;
-  top: -224px;
-  left: 60px;
+  position: absolute;
+  top: 10%;
+  right: 2%;
 }
 
 .afi-section {
@@ -300,14 +345,16 @@
   right: 10%;
 }
 
-.donate-conatainer {
-  padding-top: 6%;
+.donate-container {
+  position: absolute;
+  left: 0;
+  bottom: 2%;
 }
 
 .donate-section {
   color: white;
   text-align: left;
-  font-size: 15px;
+  font-size: 12px;
 
   ul {
     line-height: 1;
@@ -316,6 +363,16 @@
   .title {
     font-size: 20px;
   }
+
+  a {
+    text-align: center;
+  }
+}
+
+.donate-title-section {
+  position: absolute;
+  top: 12%;
+  left: 14%;
 }
 
 .donate-button {
@@ -330,7 +387,12 @@
 }
 
 .team-container {
-  padding: 14%;
+  padding: 24%;
+  width: 100%;
+
+  @include from($desktop) {
+    padding: 14%;
+  }
 }
 
 .contact-info {
