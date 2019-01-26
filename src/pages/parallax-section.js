@@ -20,6 +20,10 @@ export default function ParallaxSection() {
           <div className="main-background" />
         </ParallaxLayer>
 
+        <ParallaxLayer offset={3} speed={0} factor={1}>
+          <div className="afi-background" />
+        </ParallaxLayer>
+
         <ParallaxLayer
           offset={0}
           speed={0.1}
