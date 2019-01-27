@@ -42,12 +42,13 @@ export default class Team extends PureComponent {
 
     return (
       <ParallaxLayer
-        offset={isMobile ? 2.7 : 2}
+        offset={2.2}
         speed={0.1}
         style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          width: '800px',
         }}
         id="team"
       >

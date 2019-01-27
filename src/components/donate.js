@@ -14,6 +14,7 @@ export default class Donate extends PureComponent {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          width: '800px',
         }}
         id="support"
         onClick={() => props.parallax.scrollTo(5)}

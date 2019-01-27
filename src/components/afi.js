@@ -8,12 +8,13 @@ export default class AFI extends PureComponent {
 
     return (
       <ParallaxLayer
-        offset={isMobile ? 4 : 3}
+        offset={3}
         speed={0.1}
         style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          width: '800px',
         }}
         id="afi"
         onClick={() => props.parallax.scrollTo(4)}

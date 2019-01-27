@@ -7,6 +7,10 @@
   src: url(../fonts/HYHeiLiZhiTiJ.ttf);
 }
 
+body {
+  width: 1440px;
+}
+
 .container > div > div {
   display: flex;
   align-items: center;
@@ -15,9 +19,11 @@
 
 .parallax-layer-container {
   max-width: 8040px !important;
+  // width: 8640px !important;
 
   & > div {
     max-width: 8040px !important;
+    // width: 8640px !important;
   }
 }
 
@@ -189,7 +195,7 @@
     left: 54%;
   }
 
-  @media screen and (min-height: 700px) {
+  @media screen and (max-height: 700px) {
     top: 5%;
   }
 }
@@ -257,12 +263,15 @@
 
 .contact-container {
   max-width: 400px;
-  right: 4%;
   position: absolute;
+  z-index: 9999;
+  right: 1%;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 12%;
 
   @include from(1440px) {
-    left: -32%;
-    right: 0;
+    right: 40px;
   }
 }
 
@@ -288,14 +297,16 @@
 
 .afi-container {
   max-width: 900px;
+  margin-top: 10%;
+
   p {
     color: white;
     margin-top: 2%;
     text-align: left;
-    font-size: 15px;
+    font-size: 14px;
   }
 
-  @media screen and (min-height: 700px) {
+  @media screen and (max-height: 700px) {
     padding: 10%;
   }
 }
@@ -375,9 +386,16 @@
 }
 
 .donate-container {
+  max-width: 500px;
   position: absolute;
-  left: 0;
-  bottom: 2%;
+  left: 4%;
+  top: 26%;
+
+  @media screen and (max-height: 700px) {
+    position: absolute;
+    left: 4%;
+    bottom: 2%;
+  }
 }
 
 .donate-section {
@@ -401,12 +419,17 @@
 .donate-title-section {
   position: absolute;
   top: 12%;
-  left: 14%;
+  left: 4%;
 
-  @media screen and (min-height: 700px) {
+  .title {
+    margin: 10px;
+    padding: 0;
+  }
+
+  @media screen and (max-height: 700px) {
     position: absolute;
-    top: 8%;
-    left: 2%;
+    top: 10%;
+    left: 4%;
   }
 }
 
@@ -429,9 +452,9 @@
     padding: 14%;
   }
 
-  @media screen and (min-height: 700px) {
+  @media screen and (max-height: 700px) {
     padding: 14%;
-    margin-top: 3%;
+    margin-top: 8%;
   }
 }
 

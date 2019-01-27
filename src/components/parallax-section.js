@@ -30,7 +30,7 @@ export default function ParallaxSection() {
           style={{
             display: 'block',
             width: '10%',
-            marginLeft: '13%',
+            marginLeft: '15%',
             marginTop: '-1%',
           }}
         >

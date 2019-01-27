@@ -6,12 +6,13 @@ export default class Story extends PureComponent {
     const { props } = this.props
     return (
       <ParallaxLayer
-        offset={1}
+        offset={1.5}
         speed={0.1}
         style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          width: '800px',
         }}
         id="story"
         onClick={() => props.parallax.scrollTo(2)}
