@@ -21,9 +21,9 @@ export default class Homepage extends PureComponent {
         onClick={() => props.parallax.scrollTo(1)}
       >
         <div className="title-text-container">
-          <Image className="afi-thesis" imgsrc="AFI Thesis.png" />
-          <Image className="the-speech-title" imgsrc="THE SPEECH WHITE.png" />
-          <Image className="chinese-title" imgsrc="Chinese Title.png" />
+          <Image className="afi-thesis" imgsrc="afi-thesis.png" />
+          <Image className="the-speech-title" imgsrc="the-speech-white.png" />
+          <Image className="chinese-title" imgsrc="chinese-title.png" />
         </div>
         <a
           href="https://my.afi.com/dev/contribute2.aspx?don=244&fieldAmt="
@@ -31,7 +31,7 @@ export default class Homepage extends PureComponent {
           className="title-link"
         >
           <button type="button" className="button is-black title-button">
-            <Image className="donate-title" imgsrc="DONATE NEW.png" />
+            <Image className="donate-title" imgsrc="donate-new.png" />
           </button>
         </a>
       </ParallaxLayer>

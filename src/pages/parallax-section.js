@@ -34,7 +34,7 @@ export default function ParallaxSection() {
             marginTop: '-1%',
           }}
         >
-          <Image imgsrc="branch1.png" className="branch1" />
+          <Image imgsrc="branch-new.png" className="branch1" />
         </ParallaxLayer>
         <ParallaxLayer
           offset={0}

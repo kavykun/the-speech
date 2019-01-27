@@ -22,20 +22,6 @@ export default class Donate extends PureComponent {
     })
   }
 
-  openedProfile = person => {
-    let open = false
-
-    if (!this.state[person]) {
-      open = true
-    } else if (this.state[person]) {
-      open = !this.state[person]
-    }
-
-    this.setState({
-      [person]: open,
-    })
-  }
-
   render() {
     const { firstName, lastName, phone, email, message } = this.state
 

@@ -34,6 +34,7 @@ export default class Image extends PureComponent {
           return (
             <Img
               {...this.props}
+              onClick={this.props.onClick}
               fluid={
                 data.allImageSharp.edges.find(element => {
                   // Match string after final slash

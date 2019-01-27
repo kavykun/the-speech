@@ -4,9 +4,6 @@ import { ParallaxLayer } from 'react-spring/addons'
 export default class Story extends PureComponent {
   render() {
     const { props } = this.props
-
-    console.log(this.props)
-
     return (
       <ParallaxLayer
         offset={1}
