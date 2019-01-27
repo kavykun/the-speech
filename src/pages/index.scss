@@ -13,6 +13,14 @@
   justify-content: center;
 }
 
+.parallax-layer-container {
+  max-width: 8040px !important;
+
+  & > div {
+    max-width: 8040px !important;
+  }
+}
+
 .afi-background {
   background-image: url('../images/afi-paper.png');
   background-repeat: no-repeat;
@@ -180,6 +188,10 @@
     position: absolute;
     left: 54%;
   }
+
+  @media screen and (min-height: 700px) {
+    top: 5%;
+  }
 }
 
 .button {
@@ -281,6 +293,10 @@
     margin-top: 2%;
     text-align: left;
     font-size: 15px;
+  }
+
+  @media screen and (min-height: 700px) {
+    padding: 10%;
   }
 }
 
@@ -386,6 +402,12 @@
   position: absolute;
   top: 12%;
   left: 14%;
+
+  @media screen and (min-height: 700px) {
+    position: absolute;
+    top: 8%;
+    left: 2%;
+  }
 }
 
 .donate-button {
@@ -405,6 +427,11 @@
 
   @include from($desktop) {
     padding: 14%;
+  }
+
+  @media screen and (min-height: 700px) {
+    padding: 14%;
+    margin-top: 3%;
   }
 }
 

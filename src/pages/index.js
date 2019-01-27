@@ -96,6 +96,7 @@ export default class IndexPage extends PureComponent {
             ref={ref => (this.parallax = ref)}
             pages={isMobile ? 6 : 6}
             horizontal={!isMobile}
+            className="parallax-layer-container"
           >
             <ParallaxSection />
             <Homepage props={this} />
