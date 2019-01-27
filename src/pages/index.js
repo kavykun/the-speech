@@ -9,16 +9,16 @@ import './index.scss'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import { Parallax, ParallaxLayer } from 'react-spring/addons'
+import { Parallax } from 'react-spring/addons'
 
 // Pages
-import ParallaxSection from './parallax-section'
-import Homepage from './home-page'
-import Story from './story'
-import Team from './team'
-import AFI from './afi'
-import Donate from './donate'
-import Contact from './contact'
+import ParallaxSection from '../components/parallax-section'
+import Homepage from '../components/home-page'
+import Story from '../components/story'
+import Team from '../components/team'
+import AFI from '../components/afi'
+import Donate from '../components/donate'
+import Contact from '../components/contact'
 
 export default class IndexPage extends PureComponent {
   render() {
