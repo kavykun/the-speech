@@ -57,7 +57,7 @@ body {
 .title-background {
   background-image: url('../images/title-background.jpg');
   background-repeat: no-repeat;
-  height: 100%;
+  height: 102%;
   width: 100%;
   background-size: 100%;
   background-size: auto 100%;
@@ -297,6 +297,73 @@ body {
   font-size: 14px;
 }
 
+.haohao-desc-text {
+  top: 16%;
+  font-size: 14px;
+  padding: 4%;
+  left: -17%;
+}
+
+.haohao-team-bg {
+  -moz-transform: scale(1, -1) rotate(-30deg);
+  -o-transform: scale(1, -1) rotate(-30deg);
+  -webkit-transform: scale(1, -1) rotate(-30deg);
+  transform: scale(1, -1) rotate(-30deg);
+  right: 43% !important;
+  width: 450px !important;
+  top: -11% !important;
+  left: -22% !important;
+}
+
+.xiaoxiao-team-bg {
+  -moz-transform: scale(1, -1) rotate(-40deg);
+  -o-transform: scale(1, -1) rotate(-40deg);
+  -webkit-transform: scale(1, -1) rotate(-40deg);
+  transform: scale(1, -1) rotate(-40deg);
+  right: 43% !important;
+  width: 450px !important;
+  top: 38% !important;
+  left: -22% !important;
+}
+
+.xiaoxiao-desc-text {
+  left: -14%;
+  top: 55%;
+}
+
+.anton-team-bg {
+  -moz-transform: scale(1, -1) rotate(-40deg);
+  -o-transform: scale(1, -1) rotate(-40deg);
+  -webkit-transform: scale(1, -1) rotate(-40deg);
+  transform: scale(1, -1) rotate(-40deg);
+  top: -20% !important;
+  right: -27% !important;
+}
+
+.anton-desc-text {
+  top: 33%;
+  padding: 4%;
+  right: -9%;
+  color: black;
+}
+
+.luqi-team-bg {
+  -moz-transform: scale(1, -1) rotate(0deg);
+  -o-transform: scale(1, -1) rotate(0deg);
+  -webkit-transform: scale(1, -1) rotate(0deg);
+  transform: scale(1, -1) rotate(0deg);
+  right: 43% !important;
+  width: 450px !important;
+  top: 35% !important;
+  left: -19% !important;
+}
+
+.luqi-desc-text {
+  left: -13%;
+  top: 56%;
+  color: black;
+}
+
 .team-description-bg {
   height: auto;
   position: absolute !important;
@@ -304,21 +371,24 @@ body {
   right: 20%;
   top: 4%;
   width: 450px;
-
-  -moz-transform: scale(1, -1) rotate(90deg);
-  -o-transform: scale(1, -1) rotate(90deg);
-  -webkit-transform: scale(1, -1) rotate(90deg);
-  transform: scale(1, -1) rotate(90deg);
 }
 
-// .afi-section,
-// .support-section,
-// .support-container,
-// .donate-section,
-// .donate-container,
-// .contact-section {
-//   max-width: 800px;
-// }
+.kiki-team-bg {
+  -moz-transform: scale(1, -1) rotate(-20deg);
+  -o-transform: scale(1, -1) rotate(-20deg);
+  -webkit-transform: scale(1, -1) rotate(-20deg);
+  transform: scale(1, -1) rotate(-20deg);
+  width: 450px !important;
+  right: -7% !important;
+  top: 29% !important;
+}
+
+.kiki-desc-text {
+  top: 37%;
+  right: -7%;
+  padding: 5%;
+  color: black;
+}
 
 .contact-container {
   max-width: 400px;
@@ -375,7 +445,6 @@ body {
 
 .afi-thesis {
   width: 60%;
-  margin-left: auto;
   margin-right: auto;
 
   @include from($desktop) {
@@ -392,7 +461,7 @@ body {
   @include from($desktop) {
     width: 30%;
     left: 5%;
-    margin-top: 34px;
+    margin-top: 5%;
     margin-bottom: 16px;
   }
 }

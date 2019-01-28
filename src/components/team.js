@@ -15,7 +15,7 @@ const antonDesc =
 const luqiDesc =
   'Luqi Zhao is from Kunming, a city in Southwest China. She graduated from University of North Carolina Wilmington (UNCW) with a major in Film Studies, a minor in Digital Arts and a minor in Asian Studies. During undergrad, she developed a strong interest in editing which led her to pursue her dream to become a film editor. She then moved to Los Angeles and worked in post-production along with graphic design at Market Street Productions in Venice, California for a year. In 2017, Luqi got accepted to American Film Institute Conservatory (AFI) and started the Editing Program since then.'
 const kikiDesc =
-  'Born and raised in the North region of  China, she received traditional art training from an early age and graduated from LuXun Academy of Fine Art in 2011. Prior to moving to the US, she pursued her M.F.A in Painting at Savannah College of Art and Design in 2016. Working with drawing, painting and installations, her works involve a strong personal confession about spiritual position and her surrounding as a foreigner living in America. Mining memories and media constructions of social expectations, her works are charged with a grotesque, allegorical quality. Qi’s work has been wildly shown internationally and nationally in the U.S, Europe, Canada and China, including: Katzen Art Center (Washington. DC, U.S), Mi gallery(Paris, France), Crossing Art Space (Wuhan, China), Gallery 50 (Toronto,Canada), Laney Contemporary Fine Art (Savannah, GA) and more. Her works are also selected into many internationally art festival and art fair such as Heat Paris 2017, superfine! Miami 2016, Spectrum Miami art fair 2016, and define art festival 2015(Savannah, GA).'
+  'Born and raised in the North region of  China, she received traditional art training from an early age and graduated from LuXun Academy of Fine Art in 2011. Prior to moving to the US, she pursued her M.F.A in Painting at Savannah College of Art and Design in 2016. Qi’s work has been wildly shown internationally and nationally in the U.S, Europe, Canada and China, including: Katzen Art Center, Mi gallery, Crossing Art Space, Gallery 50, Laney Contemporary Fine Art and more. Her works are also selected into many internationally art festival and art fair such as Heat Paris 2017, superfine! Miami 2016, Spectrum Miami art fair 2016, and define art festival 2015.'
 
 export default class Team extends PureComponent {
   constructor(props) {
@@ -34,7 +34,7 @@ export default class Team extends PureComponent {
 
     if (person === 'haohao') {
       object = {
-        haohao: true,
+        haohao: !this.state[person],
         xiaoxiao: false,
         anton: false,
         luqi: false,
@@ -45,7 +45,7 @@ export default class Team extends PureComponent {
     if (person === 'xiaoxiao') {
       object = {
         haohao: false,
-        xiaoxiao: true,
+        xiaoxiao: !this.state[person],
         anton: false,
         luqi: false,
         kiki: false,
@@ -56,7 +56,7 @@ export default class Team extends PureComponent {
       object = {
         haohao: false,
         xiaoxiao: false,
-        anton: true,
+        anton: !this.state[person],
         luqi: false,
         kiki: false,
       }
@@ -67,7 +67,7 @@ export default class Team extends PureComponent {
         haohao: false,
         xiaoxiao: false,
         anton: false,
-        luqi: true,
+        luqi: !this.state[person],
         kiki: false,
       }
     }
@@ -78,7 +78,7 @@ export default class Team extends PureComponent {
         xiaoxiao: false,
         anton: false,
         luqi: false,
-        kiki: true,
+        kiki: !this.state[person],
       }
     }
 
@@ -139,7 +139,7 @@ export default class Team extends PureComponent {
           {luqi && (
             <TeamDesc
               className="luqi"
-              imgsrc="pink-bg.png"
+              imgsrc="yellow-bg.png"
               descrption={luqiDesc}
               show={luqi}
               description={luqiDesc}
@@ -148,7 +148,7 @@ export default class Team extends PureComponent {
           {kiki && (
             <TeamDesc
               className="kiki"
-              imgsrc="yellow-bg.png"
+              imgsrc="pink-bg.png"
               descrption={kikiDesc}
               show={kiki}
               description={kikiDesc}

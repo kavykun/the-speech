@@ -1,7 +1,6 @@
 import React, { PureComponent, Fragment } from 'react'
 import classNames from 'classnames'
 import { isMobile } from 'react-device-detect'
-import { Waypoint } from 'react-waypoint'
 
 // Styles
 import './index.scss'

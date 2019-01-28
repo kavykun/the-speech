@@ -19,7 +19,9 @@ export default function(props) {
           show &&
           (props => (
             <div style={props}>
-              <p className="team-description-text">{description}</p>
+              <p className={`team-description-text ${className}-desc-text`}>
+                {description}
+              </p>
               <Image
                 imgsrc={imgsrc}
                 className={`team-description-bg ${className}-team-bg`}
