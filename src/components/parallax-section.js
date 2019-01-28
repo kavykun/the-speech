@@ -8,8 +8,8 @@ export default function ParallaxSection() {
   return (
     <Fragment>
       <BrowserView>
-        <ParallaxLayer offset={0} speed={0} factor={2}>
-          <Image className="title-background" imgsrc="title_page.png" />
+        <ParallaxLayer offset={0} speed={0} factor={1}>
+          <div className="title-background" />
         </ParallaxLayer>
 
         <ParallaxLayer offset={isMobile ? 0 : 1} speed={0} factor={5}>
