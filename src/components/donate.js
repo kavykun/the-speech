@@ -25,7 +25,7 @@ export default class Donate extends PureComponent {
 
     return (
       <ParallaxLayer
-        offset={3.2}
+        offset={3.35}
         speed={0.1}
         style={{
           display: 'flex',
@@ -58,7 +58,7 @@ export default class Donate extends PureComponent {
                 <div className="container donate-container">
                   <div className="columns">
                     <div className="column">
-                      <div className="donate-section">
+                      <div className="donate-section donate-section-1">
                         <b>Make sure “1927 - THE SPEECH " is selected.</b>
                         <br />
                         Fill out your information + donation amount.

@@ -95,7 +95,7 @@ export default class IndexPage extends PureComponent {
           </nav>
           <Parallax
             ref={ref => (this.parallax = ref)}
-            pages={4.45}
+            pages={4.65}
             horizontal={!isMobile}
             className="parallax-layer-container"
           >
