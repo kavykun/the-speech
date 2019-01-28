@@ -18,11 +18,11 @@ body {
 }
 
 .parallax-layer-container {
-  max-width: 8040px !important;
+  max-width: 8020px !important;
   // width: 8640px !important;
 
   & > div {
-    max-width: 8040px !important;
+    max-width: 8020px !important;
     // width: 8640px !important;
   }
 }
@@ -245,10 +245,23 @@ body {
   width: 100%;
 }
 
+.team-description-text {
+  position: absolute !important;
+  z-index: 2;
+  color: white;
+  max-width: 350px;
+  right: 25%;
+  top: 33%;
+  font-size: 14px;
+}
+
 .team-description-bg {
   height: auto;
-  width: 500px;
   position: absolute !important;
+  z-index: 1;
+  right: 20%;
+  top: 4%;
+  width: 450px;
 }
 
 .story-section,

@@ -17,7 +17,7 @@ export default class AFI extends PureComponent {
           width: '800px',
         }}
         id="afi"
-        onClick={() => props.parallax.scrollTo(4)}
+        onClick={() => props.parallax.scrollTo(3.8)}
       >
         <section id="afi" className="section afi-section">
           <div className="container afi-container">

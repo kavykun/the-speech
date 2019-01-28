@@ -18,7 +18,7 @@ export default class Homepage extends PureComponent {
           justifyContent: 'center',
         }}
         id="home"
-        onClick={() => props.parallax.scrollTo(1)}
+        onClick={() => props.parallax.scrollTo(1.2)}
       >
         <div className="title-text-container">
           <Image className="afi-thesis" imgsrc="afi-thesis.png" />

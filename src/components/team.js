@@ -30,11 +30,65 @@ export default class Team extends PureComponent {
   }
 
   openedProfile = person => {
-    console.log(person)
+    let object = this.state
+
+    if (person === 'haohao') {
+      object = {
+        haohao: true,
+        xiaoxiao: false,
+        anton: false,
+        luqi: false,
+        kiki: false,
+      }
+    }
+
+    if (person === 'xiaoxiao') {
+      object = {
+        haohao: false,
+        xiaoxiao: true,
+        anton: false,
+        luqi: false,
+        kiki: false,
+      }
+    }
+
+    if (person === 'anton') {
+      object = {
+        haohao: false,
+        xiaoxiao: false,
+        anton: true,
+        luqi: false,
+        kiki: false,
+      }
+    }
+
+    if (person === 'luqi') {
+      object = {
+        haohao: false,
+        xiaoxiao: false,
+        anton: false,
+        luqi: true,
+        kiki: false,
+      }
+    }
+
+    if (person === 'kiki') {
+      object = {
+        haohao: false,
+        xiaoxiao: false,
+        anton: false,
+        luqi: false,
+        kiki: true,
+      }
+    }
 
     this.setState({
-      [person]: !this.state.open,
+      ...object,
     })
+  }
+
+  toggleOffPopup = () => {
+    console.log('test')
   }
 
   render() {
@@ -51,6 +105,7 @@ export default class Team extends PureComponent {
           width: '800px',
         }}
         id="team"
+        onClick={this.toggleOffPopup()}
       >
         <div className="container team-container">
           {haohao && (
@@ -59,6 +114,8 @@ export default class Team extends PureComponent {
               imgsrc="blue-bg.png"
               descrption={haohaoDesc}
               height={100}
+              show={haohao}
+              description={haohaoDesc}
             />
           )}
           {xiaoxiao && (
@@ -67,6 +124,8 @@ export default class Team extends PureComponent {
               imgsrc="green-bg.png"
               descrption={xiaoxiaoDesc}
               height={100}
+              show={xiaoxiao}
+              description={xiaoxiaoDesc}
             />
           )}
           {anton && (
@@ -74,6 +133,8 @@ export default class Team extends PureComponent {
               className="anton"
               imgsrc="orange-bg.png"
               descrption={antonDesc}
+              show={anton}
+              description={antonDesc}
             />
           )}
           {luqi && (
@@ -81,6 +142,8 @@ export default class Team extends PureComponent {
               className="luqi"
               imgsrc="pink-bg.png"
               descrption={luqiDesc}
+              show={luqi}
+              description={luqiDesc}
             />
           )}
           {kiki && (
@@ -88,6 +151,8 @@ export default class Team extends PureComponent {
               className="kiki"
               imgsrc="yellow-bg.png"
               descrption={kikiDesc}
+              show={kiki}
+              description={kikiDesc}
             />
           )}
 
@@ -119,7 +184,7 @@ export default class Team extends PureComponent {
                 className="team-img"
                 alt="xiaoxiao"
                 onClick={() => {
-                  this.openedProfile('anton')
+                  this.openedProfile('xiaoxiao')
                 }}
               />
             </div>
@@ -158,7 +223,7 @@ export default class Team extends PureComponent {
             <div
               className="column"
               onClick={() => {
-                this.openedProfile('luqi')
+                this.openedProfile('kiki')
               }}
             >
               <Image
