@@ -264,7 +264,6 @@ body {
   width: 450px;
 }
 
-.story-section,
 .afi-section,
 .support-section,
 .support-container,
@@ -294,10 +293,11 @@ body {
   .body {
     text-align: justify;
     line-height: 1.5;
-    padding: 10%;
+    font-size: 16px;
 
     @include from($desktop) {
-      padding: 0;
+      padding-left: 10%;
+      padding-right: 10%;
     }
   }
 }

@@ -12,7 +12,7 @@ export default class Story extends PureComponent {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          width: '800px',
+          width: '700px',
         }}
         id="story"
         onClick={() => props.parallax.scrollTo(2)}
