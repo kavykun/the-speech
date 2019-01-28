@@ -16,7 +16,7 @@ export default class AFI extends PureComponent {
           justifyContent: 'center',
         }}
         id="afi"
-        onClick={() => props.parallax.scrollTo(3.8)}
+        onClick={() => props.parallax.scrollTo(3.2)}
       >
         <section id="afi" className="section afi-section">
           <div className="container afi-container">
@@ -69,16 +69,6 @@ export default class AFI extends PureComponent {
                 </li>
               </ul>
             </div>
-            <p>
-              Most recently, multiple AFI alumni received 2011 Emmy Award
-              nominations, including Patty Jenkins (THE KILLING, directing class
-              of 2000), Anne Garefino (SOUTH PARK, producing class of 1988),
-              Brad Falchuk (GLEE, screenwriting class of 1996), Dante Di Loreto
-              (GLEE, producing class of 1991), Bradley Buecker (GLEE, directing
-              class of 2003), Jeremy Podeswa (BOARDWALK EMPIRE, directing class
-              of 1984), Manny Cotto (DEXTER, directing class of 1984) and Paul
-              Starkman (TOP CHEF, cinematography class of 1998).
-            </p>
           </div>
         </section>
       </ParallaxLayer>

@@ -26,7 +26,8 @@ export default class Donate extends PureComponent {
     const { firstName, lastName, phone, email, message } = this.state
 
     return (
-      <div className="container contact-container">
+      <div id="scroll" className="container contact-container">
+        <ParallaxLayer offset={6} />
         <h1 className="title">Contact Us</h1>
         <div className="body">
           <div className="columns">

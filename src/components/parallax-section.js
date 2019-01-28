@@ -19,6 +19,10 @@ export default function ParallaxSection() {
         <ParallaxLayer offset={isMobile ? 0 : 1} speed={0} factor={5}>
           <div className="main-background" />
         </ParallaxLayer>
+        {/* 
+        <ParallaxLayer offset={2.45} speed={0} factor={1}>
+          <div className="afi-background " />
+        </ParallaxLayer> */}
 
         <ParallaxLayer
           offset={0}

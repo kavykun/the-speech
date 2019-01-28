@@ -20,6 +20,13 @@ import AFI from '../components/afi'
 import Donate from '../components/donate'
 import Contact from '../components/contact'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faArrowRight)
+
 export default class IndexPage extends PureComponent {
   render() {
     return (
@@ -84,8 +91,8 @@ export default class IndexPage extends PureComponent {
                 </AnchorLink>
                 <AnchorLink
                   className="navbar-item"
-                  href="#contact"
-                  onClick={() => this.parallax.scrollTo(5)}
+                  href="#scroll"
+                  onClick={() => this.parallax.scrollTo(6)}
                 >
                   Contact
                 </AnchorLink>
@@ -99,6 +106,18 @@ export default class IndexPage extends PureComponent {
             className="parallax-layer-container"
           >
             <ParallaxSection />
+            <a className="navigate-arrow-container-home">
+              <FontAwesomeIcon
+                className="navigate-arrow"
+                icon={['fas', 'arrow-right']}
+              />
+            </a>
+            <a className="navigate-arrow-container-story">
+              <FontAwesomeIcon
+                className="navigate-arrow"
+                icon={['fas', 'arrow-right']}
+              />
+            </a>
             <Homepage props={this} />
             <Story props={this} />
             <Team props={this} />

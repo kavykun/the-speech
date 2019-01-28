@@ -27,12 +27,15 @@ body {
   }
 }
 
-.afi-background {
-  background-image: url('../images/afi-paper.png');
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-}
+// .afi-background {
+//   background-image: url('../images/afi-paper.png');
+//   background-repeat: no-repeat;
+//   height: 100%;
+//   width: 100%;
+//   background-size: auto 100%;
+//   background-repeat: no-repeat;
+//   background-position: top left;
+// }
 
 .main-background {
   background-image: url('../images/extended_background-clean-horizontal_streched\ copy.jpg');
@@ -504,8 +507,39 @@ body {
   right: 15%;
 }
 
+.donate-content {
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+.navigate-arrow-container-home {
+  position: absolute;
+  top: 1;
+  top: 45%;
+  left: 20.5%;
+  font-size: 50px;
+}
+
+.navigate-arrow-container-story {
+  position: absolute;
+  top: 1;
+  top: 45%;
+  left: 42%;
+  font-size: 50px;
+}
+
+.navigate-arrow {
+  color: white;
+
+  &hover {
+    color: gray;
+  }
+}
+
 .afi-section {
-  padding-top: 10%;
   position: relative;
   font-size: 15px;
 }

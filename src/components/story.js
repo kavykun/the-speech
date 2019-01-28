@@ -14,7 +14,7 @@ export default class Story extends PureComponent {
           justifyContent: 'center',
         }}
         id="story"
-        onClick={() => props.parallax.scrollTo(2)}
+        onClick={() => props.parallax.scrollTo(1.68)}
       >
         <div className="container story-container">
           <h1 className="title">Story</h1>
