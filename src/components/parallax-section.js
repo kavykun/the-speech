@@ -26,7 +26,7 @@ export default function ParallaxSection() {
           style={{
             display: 'block',
             width: '10%',
-            marginLeft: '15%',
+            marginLeft: '18%',
             marginTop: '-1%',
           }}
         >
@@ -38,7 +38,7 @@ export default function ParallaxSection() {
           style={{
             display: 'block',
             width: '10%',
-            marginLeft: '-5%',
+            marginLeft: '-5.5%',
           }}
         >
           <Image imgsrc="branch2.png" className="branch2" />
