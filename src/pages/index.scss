@@ -35,7 +35,7 @@ body {
 }
 
 .main-background {
-  background-image: url('../images/extended_background-clean-horizontal.jpg');
+  background-image: url('../images/extended_background-clean-horizontal_streched.jpg');
   height: 100%;
   width: 100%;
   background-size: auto 100%;
@@ -316,8 +316,11 @@ body {
 }
 
 .afi-container {
-  max-width: 900px;
-  margin-top: 10%;
+  width: 700px;
+  line-height: 1;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 0%;
 
   p {
     color: white;
