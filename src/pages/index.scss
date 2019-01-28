@@ -250,6 +250,30 @@ body {
   transition: all 0.5s ease;
 }
 
+.bottom-row {
+  margin-top: 10%;
+}
+
+.kiki-image {
+  width: 160px !important;
+  margin-top: -6%;
+  margin-left: 4%;
+}
+
+.luqi-image {
+  width: 180px !important;
+  margin-left: 40%;
+}
+
+.row {
+  display: flex;
+
+  & > div {
+    height: 100%;
+    width: 100%;
+  }
+}
+
 .navbar-item {
   color: white;
   text-decoration: underline;
@@ -280,6 +304,11 @@ body {
   right: 20%;
   top: 4%;
   width: 450px;
+
+  -moz-transform: scale(1, -1) rotate(90deg);
+  -o-transform: scale(1, -1) rotate(90deg);
+  -webkit-transform: scale(1, -1) rotate(90deg);
+  transform: scale(1, -1) rotate(90deg);
 }
 
 // .afi-section,
@@ -511,7 +540,6 @@ body {
 
   @media screen and (max-height: 700px) {
     padding: 14%;
-    margin-top: 8%;
   }
 }
 

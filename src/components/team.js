@@ -156,83 +156,83 @@ export default class Team extends PureComponent {
           )}
 
           <h1 className="title">Team</h1>
-          <div className="columns">
-            <div
-              className="column"
-              onClick={() => {
-                this.openedProfile('haohao')
-              }}
-            >
-              <Image
-                imgsrc="haohao.png"
-                className="team-img"
-                alt="haohao"
+          <div className="row-container">
+            <div className="row">
+              <div
                 onClick={() => {
                   this.openedProfile('haohao')
                 }}
-              />
-            </div>
-            <div
-              className="column"
-              onClick={() => {
-                this.openedProfile('xiaoxiao')
-              }}
-            >
-              <Image
-                imgsrc="xiaoxiao.png"
-                className="team-img"
-                alt="xiaoxiao"
+              >
+                <Image
+                  imgsrc="haohao.png"
+                  className="team-img"
+                  alt="haohao"
+                  onClick={() => {
+                    this.openedProfile('haohao')
+                  }}
+                />
+              </div>
+              <div
                 onClick={() => {
                   this.openedProfile('xiaoxiao')
                 }}
-              />
-            </div>
-            <div
-              className="column"
-              onClick={() => {
-                this.openedProfile('anton')
-              }}
-            >
-              <Image
-                imgsrc="anton.png"
-                className="team-img"
-                alt="anton"
+              >
+                <Image
+                  imgsrc="xiaoxiao.png"
+                  className="team-img"
+                  alt="xiaoxiao"
+                  onClick={() => {
+                    this.openedProfile('xiaoxiao')
+                  }}
+                />
+              </div>
+
+              <div
                 onClick={() => {
                   this.openedProfile('anton')
                 }}
-              />
+              >
+                <Image
+                  imgsrc="anton.png"
+                  className="team-img"
+                  alt="anton"
+                  onClick={() => {
+                    this.openedProfile('anton')
+                  }}
+                />
+              </div>
             </div>
           </div>
-          <div className="columns">
-            <div
-              className="column"
-              onClick={() => {
-                this.openedProfile('luqi')
-              }}
-            >
-              <Image
-                imgsrc="luqi.png"
-                className="team-img"
-                alt="luqi"
+          <div className="row-container bottom-row">
+            <div className="row">
+              <div
                 onClick={() => {
                   this.openedProfile('luqi')
                 }}
-              />
-            </div>
-            <div
-              className="column"
-              onClick={() => {
-                this.openedProfile('kiki')
-              }}
-            >
-              <Image
-                imgsrc="kiki.png"
-                className="team-img"
-                alt="kiki"
+              >
+                <Image
+                  imgsrc="luqi.png"
+                  className="luqi-image team-img"
+                  alt="luqi"
+                  onClick={() => {
+                    this.openedProfile('luqi')
+                  }}
+                />
+              </div>
+              <div
                 onClick={() => {
                   this.openedProfile('kiki')
                 }}
-              />
+              >
+                <Image
+                  imgsrc="kiki.png"
+                  className="team-img kiki-image"
+                  alt="kiki"
+                  onClick={() => {
+                    this.openedProfile('kiki')
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>
