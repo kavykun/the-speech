@@ -208,6 +208,16 @@ body {
   }
 }
 
+.navbar-start {
+  position: absolute;
+  right: 3%;
+  top: 20%;
+}
+
+.donate-waypoint {
+  width: 4%;
+}
+
 .button {
   font-size: 30px;
   height: 70px;
@@ -419,6 +429,12 @@ body {
     left: 4%;
     bottom: 2%;
   }
+
+  .columns {
+    position: absolute;
+    top: -6%;
+    line-height: 1.2;
+  }
 }
 
 .donate-section {
@@ -439,9 +455,18 @@ body {
   }
 }
 
+.donate-section-2 {
+  margin-top: -80%;
+
+  .title {
+    margin-bottom: -8%;
+    font-size: 15px;
+  }
+}
+
 .donate-title-section {
   position: absolute;
-  top: 12%;
+  top: 5%;
   left: 4%;
 
   .title {
@@ -451,7 +476,7 @@ body {
 
   @media screen and (max-height: 700px) {
     position: absolute;
-    top: 10%;
+    top: 5%;
     left: 4%;
   }
 }
@@ -459,12 +484,17 @@ body {
 .donate-button {
   margin-bottom: 1.5rem;
   background-color: #005a67 !important;
-  font-size: 30px;
-  height: 60px !important;
-  max-width: 240px !important;
+  font-size: 15px;
+  height: 34px !important;
+  max-width: 120px !important;
   width: 100%;
   color: white !important;
   border-color: white !important;
+  margin-left: 2%;
+
+  h2 {
+    font-size: 15px;
+  }
 }
 
 .team-container {

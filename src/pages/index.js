@@ -1,6 +1,7 @@
 import React, { PureComponent, Fragment } from 'react'
 import classNames from 'classnames'
 import { isMobile } from 'react-device-detect'
+import { Waypoint } from 'react-waypoint'
 
 // Styles
 import './index.scss'
@@ -78,7 +79,7 @@ export default class IndexPage extends PureComponent {
                 <AnchorLink
                   className="navbar-item"
                   href="#support"
-                  onClick={() => this.parallax.scrollTo(4)}
+                  onClick={() => this.parallax.scrollTo(3.05)}
                 >
                   Support
                 </AnchorLink>
@@ -94,7 +95,7 @@ export default class IndexPage extends PureComponent {
           </nav>
           <Parallax
             ref={ref => (this.parallax = ref)}
-            pages={5}
+            pages={4.45}
             horizontal={!isMobile}
             className="parallax-layer-container"
           >
