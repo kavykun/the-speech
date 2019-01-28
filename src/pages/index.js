@@ -57,28 +57,28 @@ export default class IndexPage extends PureComponent {
                 <AnchorLink
                   className="navbar-item"
                   href="#story"
-                  onClick={() => this.parallax.scrollTo(1.2)}
+                  onClick={() => this.parallax.scrollTo(1)}
                 >
                   Story
                 </AnchorLink>
                 <AnchorLink
                   className="navbar-item"
                   href="#team"
-                  onClick={() => this.parallax.scrollTo(2)}
+                  onClick={() => this.parallax.scrollTo(1.7)}
                 >
                   Team
                 </AnchorLink>
                 <AnchorLink
                   className="navbar-item"
                   href="#afi"
-                  onClick={() => this.parallax.scrollTo(2.8)}
+                  onClick={() => this.parallax.scrollTo(2.4)}
                 >
                   AFI
                 </AnchorLink>
                 <AnchorLink
                   className="navbar-item"
                   href="#support"
-                  onClick={() => this.parallax.scrollTo(3.8)}
+                  onClick={() => this.parallax.scrollTo(4)}
                 >
                   Support
                 </AnchorLink>
@@ -94,7 +94,7 @@ export default class IndexPage extends PureComponent {
           </nav>
           <Parallax
             ref={ref => (this.parallax = ref)}
-            pages={6}
+            pages={5}
             horizontal={!isMobile}
             className="parallax-layer-container"
           >

@@ -96,13 +96,12 @@ export default class Team extends PureComponent {
 
     return (
       <ParallaxLayer
-        offset={2.2}
+        offset={1.8}
         speed={0.1}
         style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          width: '800px',
         }}
         id="team"
         onClick={this.toggleOffPopup()}

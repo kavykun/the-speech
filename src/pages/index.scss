@@ -36,9 +36,11 @@ body {
 
 .main-background {
   background-image: url('../images/extended_background-clean-horizontal.jpg');
-  background-repeat: no-repeat;
   height: 100%;
   width: 100%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: top left;
 
   @include until($desktop) {
     background-image: url('../images/extended_background-clean-vertical.jpg');
@@ -270,14 +272,14 @@ body {
   width: 450px;
 }
 
-.afi-section,
-.support-section,
-.support-container,
-.donate-section,
-.donate-container,
-.contact-section {
-  max-width: 800px;
-}
+// .afi-section,
+// .support-section,
+// .support-container,
+// .donate-section,
+// .donate-container,
+// .contact-section {
+//   max-width: 800px;
+// }
 
 .contact-container {
   max-width: 400px;
@@ -294,8 +296,7 @@ body {
 }
 
 .story-container {
-  max-width: 700px;
-
+  padding: 14%;
   .body {
     text-align: justify;
     line-height: 1.5;

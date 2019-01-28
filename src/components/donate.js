@@ -8,13 +8,12 @@ export default class Donate extends PureComponent {
 
     return (
       <ParallaxLayer
-        offset={isMobile ? 4 : 4}
+        offset={4}
         speed={0.1}
         style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          width: '800px',
         }}
         id="support"
         onClick={() => props.parallax.scrollTo(5)}
