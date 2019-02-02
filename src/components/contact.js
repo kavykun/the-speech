@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import { ParallaxLayer } from 'react-spring/addons'
-import { isMobile } from 'react-device-detect'
+import axios from 'axios'
+import qs from 'qs'
 
 export default class Donate extends PureComponent {
   constructor(props) {
@@ -20,6 +21,26 @@ export default class Donate extends PureComponent {
     this.setState({
       [name]: value || '',
     })
+  }
+
+  submitForm = () => {
+    const { firstName, lastName, phone, email, message } = this.state
+
+    const form = {
+      firstName,
+      lastName,
+      phone,
+      email,
+      message,
+    }
+
+    const options = {
+      method: 'POST',
+      headers: { 'content-type': 'application/x-www-form-urlencoded' },
+      data: qs.stringify(form),
+      url: 'http://localhost:3000',
+    }
+    axios(options)
   }
 
   render() {
@@ -105,6 +126,13 @@ export default class Donate extends PureComponent {
               />
             </div>
           </div>
+          <button
+            type="button"
+            className="button contact-button"
+            onClick={this.submitForm}
+          >
+            <h2>Send Message</h2>
+          </button>
         </div>
       </div>
     )

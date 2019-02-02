@@ -405,6 +405,11 @@ body {
   @include from(1440px) {
     right: 40px;
   }
+
+  body {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
 }
 
 .story-container {
@@ -452,7 +457,7 @@ body {
 
   @include from($desktop) {
     width: 16%;
-    left: 5%;
+    left: 8%;
   }
 }
 
@@ -466,6 +471,10 @@ body {
     left: 4%;
     margin-top: 6%;
     margin-bottom: 16px;
+  }
+
+  @include from(1600px) {
+    margin-top: 3%;
   }
 }
 
@@ -667,5 +676,18 @@ body {
 
   .field {
     margin-bottom: 0;
+  }
+}
+
+.contact-button {
+  margin-top: 4%;
+  height: 40px;
+  text-align: center;
+  width: 200px;
+  background-color: black;
+
+  h2 {
+    font-size: 16px;
+    color: white;
   }
 }
