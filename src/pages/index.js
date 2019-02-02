@@ -1,6 +1,8 @@
 import React, { PureComponent, Fragment } from 'react'
 import classNames from 'classnames'
 import { isMobile } from 'react-device-detect'
+import windowSize from 'react-window-size'
+import Waypoint from 'react-waypoint'
 
 // Styles
 import './index.scss'
@@ -27,8 +29,24 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faArrowRight)
 
-export default class IndexPage extends PureComponent {
+let pages = 4.65
+let donateOffset = 3.05
+
+class IndexPage extends PureComponent {
   render() {
+    if (window.innerHeight > 750) {
+      pages = 5.65
+      donateOffset = 3.45
+    }
+
+    if (window.innerHeight > 800) {
+      pages = 5
+    }
+
+    if (window.innerHeight > 1000) {
+      pages = 6
+    }
+
     return (
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -85,7 +103,7 @@ export default class IndexPage extends PureComponent {
                 <AnchorLink
                   className="navbar-item"
                   href="#support"
-                  onClick={() => this.parallax.scrollTo(3.05)}
+                  onClick={() => this.parallax.scrollTo(donateOffset)}
                 >
                   Support
                 </AnchorLink>
@@ -99,9 +117,10 @@ export default class IndexPage extends PureComponent {
               </div>
             </div>
           </nav>
+
           <Parallax
             ref={ref => (this.parallax = ref)}
-            pages={4.65}
+            pages={pages}
             horizontal={!isMobile}
             className="parallax-layer-container"
           >
@@ -112,12 +131,7 @@ export default class IndexPage extends PureComponent {
                 icon={['fas', 'arrow-right']}
               />
             </a>
-            <a className="navigate-arrow-container-story">
-              <FontAwesomeIcon
-                className="navigate-arrow"
-                icon={['fas', 'arrow-right']}
-              />
-            </a>
+
             <Homepage props={this} />
             <Story props={this} />
             <Team props={this} />
@@ -130,3 +144,5 @@ export default class IndexPage extends PureComponent {
     )
   }
 }
+
+export default windowSize(IndexPage)

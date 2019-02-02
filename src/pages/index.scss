@@ -397,13 +397,13 @@ body {
   max-width: 400px;
   position: absolute;
   z-index: 9999;
-  right: 1%;
+  right: 1.2%;
   margin-top: auto;
   margin-bottom: auto;
   top: 12%;
 
-  @include from(1440px) {
-    right: 40px;
+  @include from($desktop) {
+    right: 2.2%;
   }
 
   body {
@@ -444,6 +444,10 @@ body {
     margin-top: 2%;
     text-align: left;
     font-size: 14px;
+
+    @include from($desktop) {
+      font-size: 16px;
+    }
   }
 
   @media screen and (max-height: 700px) {
@@ -528,7 +532,7 @@ body {
   position: absolute;
   top: 1;
   top: 45%;
-  left: 20.5%;
+  left: 20%;
   font-size: 50px;
 }
 
@@ -582,6 +586,10 @@ body {
   text-align: left;
   font-size: 12px;
 
+  @include from($desktop) {
+    font-size: 15px;
+  }
+
   ul {
     line-height: 1;
   }
@@ -597,6 +605,10 @@ body {
 
 .donate-section-1 {
   margin-top: -5%;
+
+  @include from($desktop) {
+    margin-top: -35%;
+  }
 }
 
 .donate-section-2 {
@@ -676,6 +688,18 @@ body {
 
   .field {
     margin-bottom: 0;
+  }
+
+  label {
+    font-size: 0.8rem;
+  }
+
+  input {
+    font-size: 14px;
+  }
+
+  .body {
+    line-height: 0.5;
   }
 }
 

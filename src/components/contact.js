@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import { ParallaxLayer } from 'react-spring/addons'
 import axios from 'axios'
 import qs from 'qs'
 
@@ -38,7 +37,7 @@ export default class Donate extends PureComponent {
       method: 'POST',
       headers: { 'content-type': 'application/x-www-form-urlencoded' },
       data: qs.stringify(form),
-      url: 'http://localhost:3000',
+      url: 'https://email-server-speech.herokuapp.com',
     }
     axios(options)
   }
@@ -48,7 +47,6 @@ export default class Donate extends PureComponent {
 
     return (
       <div id="scroll" className="container contact-container">
-        <ParallaxLayer offset={6} />
         <h1 className="title">Contact Us</h1>
         <div className="body">
           <div className="columns">

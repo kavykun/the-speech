@@ -3,6 +3,8 @@ import { ParallaxLayer } from 'react-spring/addons'
 import Waypoint from 'react-waypoint'
 import { Transition } from 'react-spring'
 
+let offset = 3.26
+
 export default class Donate extends PureComponent {
   state = {
     show: false,
@@ -24,9 +26,13 @@ export default class Donate extends PureComponent {
     const { props } = this.props
     const { show } = this.state
 
+    if (window.innerHeight > 800) {
+      offset = 3.7
+    }
+
     return (
       <ParallaxLayer
-        offset={3.26}
+        offset={offset}
         speed={0.1}
         style={{
           display: 'flex',
