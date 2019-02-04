@@ -34,17 +34,19 @@ let donateOffset = 3.05
 
 class IndexPage extends PureComponent {
   render() {
-    if (window.innerHeight > 750) {
+    if (window.innerHeight > 750 && window.innerHeight < 799) {
       pages = 5.65
       donateOffset = 3.45
     }
 
-    if (window.innerHeight > 800) {
-      pages = 5
+    if (window.innerHeight > 799 && window.innerHeight < 899) {
+      pages = 5.15
+      donateOffset = 3.45
     }
 
-    if (window.innerHeight > 1000) {
+    if (window.innerHeight > 899) {
       pages = 6
+      donateOffset = 3.45
     }
 
     return (

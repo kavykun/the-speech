@@ -402,9 +402,9 @@ body {
   margin-bottom: auto;
   top: 12%;
 
-  @include from($desktop) {
-    right: 2.2%;
-  }
+  // @include from($desktop) {
+  //   right: 2.2%;
+  // }
 
   body {
     padding-left: 6%;

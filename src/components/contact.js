@@ -11,6 +11,7 @@ export default class Donate extends PureComponent {
       phone: '',
       email: '',
       message: '',
+      showMessage: false,
     }
 
     this.editForm = this.editForm.bind(this)
@@ -40,10 +41,26 @@ export default class Donate extends PureComponent {
       url: 'https://email-server-speech.herokuapp.com',
     }
     axios(options)
+
+    this.setState({
+      firstName: '',
+      lastName: '',
+      phone: '',
+      email: '',
+      message: '',
+      showMessage: true,
+    })
   }
 
   render() {
-    const { firstName, lastName, phone, email, message } = this.state
+    const {
+      firstName,
+      lastName,
+      phone,
+      email,
+      message,
+      showMessage,
+    } = this.state
 
     return (
       <div id="scroll" className="container contact-container">
@@ -131,6 +148,9 @@ export default class Donate extends PureComponent {
           >
             <h2>Send Message</h2>
           </button>
+          <br />
+          <br />
+          {showMessage && <p>Message Sent!</p>}
         </div>
       </div>
     )
