@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import { ParallaxLayer } from 'react-spring/addons'
-import { isMobile } from 'react-device-detect'
 
 // Components
 import Image from '../components/image'
@@ -96,7 +95,7 @@ export default class Team extends PureComponent {
 
     return (
       <ParallaxLayer
-        offset={1.8}
+        offset={2}
         speed={0.1}
         style={{
           display: 'flex',

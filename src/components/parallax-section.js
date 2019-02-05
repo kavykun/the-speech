@@ -9,6 +9,10 @@ export default function ParallaxSection() {
     <Fragment>
       <BrowserView>
         <ParallaxLayer offset={0} speed={0} factor={1}>
+          <div className="black-background" />
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={0} speed={0} factor={1}>
           <div className="title-background" />
         </ParallaxLayer>
 
@@ -30,7 +34,7 @@ export default function ParallaxSection() {
           style={{
             display: 'block',
             width: '10%',
-            marginLeft: '18%',
+            marginLeft: '12%',
             marginTop: '-1%',
           }}
         >

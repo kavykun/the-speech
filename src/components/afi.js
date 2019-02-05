@@ -8,7 +8,7 @@ export default class AFI extends PureComponent {
 
     return (
       <ParallaxLayer
-        offset={2.45}
+        offset={3}
         speed={0.1}
         style={{
           display: 'flex',

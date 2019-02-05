@@ -29,25 +29,25 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faArrowRight)
 
-let pages = 4.65
+let pages = 6
 let donateOffset = 3.05
 
 class IndexPage extends PureComponent {
   render() {
-    if (window.innerHeight > 750 && window.innerHeight < 799) {
-      pages = 5.65
-      donateOffset = 3.45
-    }
+    // if (window.innerHeight > 750 && window.innerHeight < 799) {
+    //   pages = 5.65
+    //   donateOffset = 3.45
+    // }
 
-    if (window.innerHeight > 799 && window.innerHeight < 899) {
-      pages = 5.15
-      donateOffset = 3.45
-    }
+    // if (window.innerHeight > 799 && window.innerHeight < 899) {
+    //   pages = 5.15
+    //   donateOffset = 3.45
+    // }
 
-    if (window.innerHeight > 899) {
-      pages = 6
-      donateOffset = 3.45
-    }
+    // if (window.innerHeight > 899) {
+    //   pages = 6
+    //   donateOffset = 3.45
+    // }
 
     return (
       <Layout>
@@ -91,21 +91,21 @@ class IndexPage extends PureComponent {
                 <AnchorLink
                   className="navbar-item"
                   href="#team"
-                  onClick={() => this.parallax.scrollTo(1.7)}
+                  onClick={() => this.parallax.scrollTo(2)}
                 >
                   Team
                 </AnchorLink>
                 <AnchorLink
                   className="navbar-item"
                   href="#afi"
-                  onClick={() => this.parallax.scrollTo(2.4)}
+                  onClick={() => this.parallax.scrollTo(3)}
                 >
                   AFI
                 </AnchorLink>
                 <AnchorLink
                   className="navbar-item"
                   href="#support"
-                  onClick={() => this.parallax.scrollTo(donateOffset)}
+                  onClick={() => this.parallax.scrollTo(4.08)}
                 >
                   Support
                 </AnchorLink>
