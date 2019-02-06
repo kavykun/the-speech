@@ -16,7 +16,7 @@ export default class AFI extends PureComponent {
           justifyContent: 'center',
         }}
         id="afi"
-        onClick={() => props.parallax.scrollTo(3.2)}
+        onClick={() => props.parallax.scrollTo(4)}
       >
         <section id="afi" className="section afi-section">
           <div className="container afi-container">

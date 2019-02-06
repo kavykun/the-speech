@@ -55,11 +55,10 @@ export default class Donate extends PureComponent {
                 <div className="donate-section donate-section-1">
                   <b>Make sure “1927 - THE SPEECH " is selected.</b>
                   <br />
-                  Fill out your information + donation amount.
                   <br />
-                  Please note, all donations are in USD.
-                  <br />
-                  Funds will help pay for the following costs:
+                  Fill out your information + donation amount. Please note, all
+                  donations are in USD. Funds will help pay for the following
+                  costs:
                   <ul type="disc">
                     <li>• Camera and Equipment Rental</li>
                     <li>• Location Fees</li>

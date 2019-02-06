@@ -17,7 +17,7 @@ export default class Story extends PureComponent {
           justifyContent: 'center',
         }}
         id="story"
-        onClick={() => props.parallax.scrollTo(1.68)}
+        onClick={() => props.parallax.scrollTo(2)}
       >
         <Waypoint
           onEnter={this._handleWaypointEnter}
