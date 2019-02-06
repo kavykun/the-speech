@@ -1,8 +1,6 @@
 import React, { PureComponent, Fragment } from 'react'
 import classNames from 'classnames'
 import { isMobile } from 'react-device-detect'
-import windowSize from 'react-window-size'
-import Waypoint from 'react-waypoint'
 
 // Styles
 import './index.scss'
@@ -34,21 +32,6 @@ let donateOffset = 3.05
 
 class IndexPage extends PureComponent {
   render() {
-    // if (window.innerHeight > 750 && window.innerHeight < 799) {
-    //   pages = 5.65
-    //   donateOffset = 3.45
-    // }
-
-    // if (window.innerHeight > 799 && window.innerHeight < 899) {
-    //   pages = 5.15
-    //   donateOffset = 3.45
-    // }
-
-    // if (window.innerHeight > 899) {
-    //   pages = 6
-    //   donateOffset = 3.45
-    // }
-
     return (
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -147,4 +130,4 @@ class IndexPage extends PureComponent {
   }
 }
 
-export default windowSize(IndexPage)
+export default IndexPage
