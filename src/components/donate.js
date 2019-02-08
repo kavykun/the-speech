@@ -1,28 +1,13 @@
 import React, { PureComponent } from 'react'
 import { ParallaxLayer } from 'react-spring/addons'
-import Waypoint from 'react-waypoint'
-import { Transition } from 'react-spring'
 
 export default class Donate extends PureComponent {
   state = {
     show: false,
   }
 
-  // _handleWaypointEnter = () => {
-  //   this.setState({
-  //     show: true,
-  //   })
-  // }
-
-  // _handleWaypointLeave = () => {
-  //   this.setState({
-  //     show: false,
-  //   })
-  // }
-
   render() {
     const { props } = this.props
-    const { show } = this.state
 
     return (
       <ParallaxLayer
@@ -34,7 +19,7 @@ export default class Donate extends PureComponent {
           justifyContent: 'center',
         }}
         id="support"
-        onClick={() => props.parallax.scrollTo(5)}
+        onClick={() => props.parallax.scrollTo(6)}
       >
         <div className="donate-content">
           <div className="donate-title-section">

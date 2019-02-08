@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import { ParallaxLayer } from 'react-spring/addons'
-import { debounce } from 'lodash'
 
 import Waypoint from 'react-waypoint'
 

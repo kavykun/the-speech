@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import { ParallaxLayer } from 'react-spring/addons'
-import { isMobile } from 'react-device-detect'
 
 export default class AFI extends PureComponent {
   render() {

@@ -86,10 +86,6 @@ export default class Team extends PureComponent {
     })
   }
 
-  toggleOffPopup = () => {
-    console.log('test')
-  }
-
   render() {
     const { haohao, xiaoxiao, anton, luqi, kiki } = this.state
 
@@ -103,7 +99,6 @@ export default class Team extends PureComponent {
           justifyContent: 'center',
         }}
         id="team"
-        onClick={this.toggleOffPopup()}
       >
         <div className="container team-container">
           {haohao && (
